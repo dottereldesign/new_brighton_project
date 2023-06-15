@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.icon_wrapper {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+header img {
+  width: 48px;
+  height: auto;
+  margin: 0 16px;
+}
+
+main {
+  width: Min(100%, 1200px);
+  margin: 96px auto 0 auto;
+}
