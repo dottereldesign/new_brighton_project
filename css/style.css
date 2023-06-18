@@ -2,7 +2,7 @@
   --clr-primary-100: #fffdf5; }
 
 body {
-  background-color: var(--clr-primary-100); }
+  background-color: white; }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
 /* Box sizing rules */
@@ -80,6 +80,8 @@ select {
   --ff-primary-100: "Montserrat", sans-serif;
   --ff-primary-200: "Open Sans", sans-serif;
   --ff-primary-300: "Inter", sans-serif;
+  --ff-primary-400: "Merriweather", serif;
+  --ff-primary-500: "Playfair Display", serif;
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -103,12 +105,14 @@ h1 {
   font-weight: var(--fw-extra-bold);
   line-height: 1;
   text-transform: uppercase;
-  margin-top: 4px; }
+  margin-top: 4px;
+  color: #333; }
 
 p {
   font-family: var(--ff-primary-200);
   font-size: var(--fs-500);
-  font-weight: var(--fw-regular); }
+  font-weight: var(--fw-regular);
+  color: #555; }
 
 .hero_header span {
   font-family: var(--ff-primary-300);
@@ -117,14 +121,128 @@ p {
   text-transform: uppercase;
   line-height: 1; }
 
+.hero_card a {
+  color: white;
+  font-family: var(--ff-primary-200);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold); }
+
+.hero_mission {
+  margin-top: 32px; }
+
+.hero_mission p {
+  font-size: var(--fs-500); }
+
+.hero_mission span {
+  font-family: var(--ff-primary-300);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase; }
+
+h2 {
+  font-family: var(--ff-primary-400);
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  color: #333; }
+
+.stories a {
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
+  font-style: italic; }
+
+.stories_grid article {
+  display: grid;
+  grid-template-rows: 2fr 4fr;
+  position: relative; }
+
+.stories_grid article img {
+  grid-row: 1;
+  background-color: black; }
+
+.stories_content-header {
+  display: flex;
+  justify-content: space-between;
+  color: #979797;
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+  padding: 16px 16px 0 16px; }
+
+h3 {
+  font-family: var(--ff-primary-400);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  color: #333;
+  margin-top: 8px;
+  padding: 0 16px; }
+
+.stories_content-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: #111;
+  flex-direction: row;
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: 16px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px; }
+
+.stories_content p {
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.7;
+  margin-top: 4px;
+  padding: 8px 16px 0 16px; }
+
+.stories_content-footer img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin-right: 16px; }
+
+.stories_content-user {
+  display: flex; }
+
+.stories_content {
+  position: relative; }
+
+.stories_content-footer::last-child span {
+  position: absolute;
+  right: 0; }
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased; }
+
 header {
   width: 100%;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 8px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: white; }
 
 .icon_wrapper {
   display: flex;
@@ -138,5 +256,133 @@ header img {
   margin: 0 16px; }
 
 main {
+  width: Min(100%, 1200px);
+  margin: 0 auto 0 auto; }
+
+.main_grid {
+  display: grid;
+  grid-template-columns: 6fr 0.5fr 4fr;
+  grid-template-rows: 1;
+  width: Min(100%, 1200px);
+  margin: 161px auto 0 auto;
+  gap: 24px; }
+
+.main_grid .col-1 {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 1;
+  z-index: 1;
+  align-items: center; }
+
+.main_grid .col-2 {
+  grid-column: 2/4;
+  grid-row: 1; }
+
+.hero_pics {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 24px 328px 24px 192px 24px;
+  column-gap: 24px; }
+
+.hero_pics .placeholder {
+  width: 100%;
+  padding: 0;
+  background-color: black; }
+
+.hero_pics .placeholder-1 {
+  background-color: #ffbb02;
+  grid-column: 1;
+  grid-row: 2/6; }
+
+.hero_pics .placeholder-2 {
+  background-color: #c44848;
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+.hero_pics .placeholder-3 {
+  background-color: #008871;
+  grid-column: 2;
+  grid-row-start: 4;
+  grid-row-end: 5; }
+
+.hero_card {
+  display: grid;
+  grid-template-columns: 115px 115px 115px 115px auto;
+  background-color: white;
+  border-left: 24px solid #62dbfb;
+  margin-top: 36px;
+  align-items: center;
+  padding-right: 24px; }
+
+.hero_card img {
+  width: 115px;
+  height: 115px; }
+
+.hero_card-1 {
+  grid-column: 1; }
+
+.hero_card-2 {
+  grid-column: 2; }
+
+.hero_card-3 {
+  grid-column: 3; }
+
+.hero_card-4 {
+  grid-column: 4;
+  display: grid;
+  grid-template-columns: 16px 200px 16px; }
+
+.hero_card a {
+  display: grid;
+  grid-column: 2/3;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 100%;
+  background-color: #530c96;
+  justify-self: center;
+  text-decoration: none;
+  grid-column: 5/6; }
+
+.hero_header p {
+  margin-top: 16px; }
+
+.stories {
+  width: Min(100%, 1200px);
+  margin: 128px auto 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.stories a {
+  display: grid;
+  justify-content: end;
+  margin-top: 8px;
+  color: #555;
+  text-decoration: none; }
+
+.stories article {
+  background-color: white;
+  width: 100%;
+  height: 425px;
+  border: 1px solid #ddd;
+  margin-top: 24px; }
+
+.hero p {
+  max-inline-size: 90%; }
+
+.stories_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2;
+  column-gap: 24px; }
+
+.ourpeople {
+  width: Min(100%, 1200px);
+  margin: 128px auto 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+footer {
   width: Min(100%, 1200px);
   margin: 96px auto 0 auto; }
